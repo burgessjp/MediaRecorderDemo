@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="音频录制"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/circle_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REC"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_recoder_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:text="00:00"
+            android:textColor="#000"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+    <solid.ren.mediarecorderdemo.view.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/ll_time" />
+
+    <ImageView
+        android:id="@+id/iv_action"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/waveView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/btn_clue_audio" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_audio_delete" />
+
+        <ImageView
+            android:id="@+id/iv_save"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_audio_done" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
